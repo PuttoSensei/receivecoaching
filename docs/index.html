@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Receive Coaching — 43 coaches. One machine. Zero cloud.</title>
 <meta name="description" content="A fully local AI coaching app for Windows. 43 specialist coaches, persistent memory, mood tracking, and insights — powered by a model running on your own machine. Your conversations never leave your computer.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Receive Coaching">
+<meta property="og:title" content="Receive Coaching — 43 coaches. One machine. Zero cloud.">
+<meta property="og:description" content="A fully local AI coaching app for Windows. Persistent memory, mood tracking, insights — powered by a model on your own machine.">
+<meta property="og:url" content="https://receivecoaching.com/">
+<meta property="og:image" content="https://receivecoaching.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://receivecoaching.com/og.png">
 <style>
   :root {
     --bg: #0f1115; --panel: #161a22; --panel-2: #1d2230; --border: #2a3040;
@@ -20,7 +33,12 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
   .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
-  header { padding: 96px 0 64px; text-align: center; }
+  .masthead { display: flex; align-items: center; justify-content: space-between; padding: 22px 0 0; }
+  .brand-lockup { display: flex; align-items: center; gap: 11px; text-decoration: none; color: var(--text); font-weight: 700; font-size: 18px; letter-spacing: -0.01em; }
+  .brand-lockup svg { display: block; }
+  .masthead .gh { color: var(--muted); text-decoration: none; font-size: 14px; border: 1px solid var(--border); padding: 8px 14px; border-radius: 8px; }
+  .masthead .gh:hover { color: var(--text); }
+  header { padding: 64px 0 64px; text-align: center; }
   h1 { font-size: clamp(32px, 6vw, 52px); line-height: 1.15; letter-spacing: -0.02em; }
   h1 .accent { color: var(--accent); }
   .sub { color: var(--muted); font-size: clamp(17px, 2.5vw, 20px); max-width: 620px; margin: 20px auto 0; }
@@ -55,6 +73,25 @@
 </head>
 <body>
 
+<nav class="wrap masthead">
+  <a class="brand-lockup" href="/">
+    <svg width="30" height="30" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <radialGradient id="bg" cx="35%" cy="30%" r="85%">
+          <stop offset="0%" stop-color="#232b47"/>
+          <stop offset="100%" stop-color="#141827"/>
+        </radialGradient>
+      </defs>
+      <circle cx="32" cy="32" r="31" fill="url(#bg)"/>
+      <circle cx="32" cy="32" r="27.5" fill="none" stroke="#3a4361" stroke-width="1"/>
+      <text x="29" y="43" font-family="'Segoe UI', system-ui, sans-serif" font-size="30" font-weight="700" fill="#e8ecf5" text-anchor="middle" letter-spacing="-1">rc</text>
+      <circle cx="47" cy="21" r="4.5" fill="#7aa2f7"/>
+    </svg>
+    Receive Coaching
+  </a>
+  <a class="gh" href="https://github.com/PuttoSensei/receivecoaching">GitHub ↗</a>
+</nav>
+
 <header class="wrap">
   <h1>43 coaches. One machine.<br><span class="accent">Zero cloud.</span></h1>
   <p class="sub">Receive Coaching is a desktop coaching app powered by an AI model running entirely on your own computer. Career, grief, ADHD, keto, spiritual life — every conversation stays on your machine, because it never had anywhere else to go.</p>
@@ -62,7 +99,7 @@
     <a class="btn btn-primary" href="https://github.com/PuttoSensei/receivecoaching/releases/download/v1.0.0/ReceiveCoaching-portable-1.0.0.exe">Download for Windows</a>
     <a class="btn btn-ghost" href="#how">How it works</a>
   </div>
-  <p class="note">Free. No account. No telemetry. ~75 MB portable .exe.</p>
+  <p class="note">Free. No account. No telemetry. ~100 MB portable .exe, nothing to install.</p>
 </header>
 
 <section class="wrap">
