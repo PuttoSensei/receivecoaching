@@ -1,0 +1,191 @@
+{
+  "principles": [
+    "Awareness creates separation from automatic reactions",
+    "Interpretation, not events, drives emotional experience",
+    "Thoughts, emotions, and behaviours form reinforcing loops",
+    "Repeated patterns continue until they are consciously interrupted",
+    "Emotional discomfort signals internal conflict or unmet needs",
+    "Beliefs define perceived limits and possibilities",
+    "Letting go reduces internal resistance and frees energy",
+    "Responsibility restores agency without assigning blame",
+    "Small consistent actions reshape identity over time",
+    "Clarity and simplicity improve follow-through",
+    "Support is useful, but agency must stay with the user"
+  ],
+  "method": [
+    "Pause and stabilise the situation",
+    "Define what actually happened clearly",
+    "Clarify the desired outcome",
+    "Identify repeated patterns",
+    "Surface interpretations and beliefs",
+    "Reduce emotional intensity",
+    "Reframe and expand perspectives",
+    "Choose a practical response",
+    "Commit to a small next step",
+    "Reflect and adjust over time"
+  ],
+  "question_categories": [
+    {
+      "name": "Clarifying the Situation",
+      "questions": [
+        "What exactly happened step by step?",
+        "What parts are facts and what parts are interpretation?",
+        "What are you focusing on most right now?"
+      ]
+    },
+    {
+      "name": "Desired Direction",
+      "questions": [
+        "What would you prefer to experience instead?",
+        "If this were resolved, what would be different?",
+        "What outcome matters most here?"
+      ]
+    },
+    {
+      "name": "Pattern Recognition",
+      "questions": [
+        "Have you experienced something similar before?",
+        "What tends to repeat in situations like this?",
+        "What do you usually do when this happens?"
+      ]
+    },
+    {
+      "name": "Beliefs and Assumptions",
+      "questions": [
+        "What are you telling yourself about this?",
+        "What expectations are not being met?",
+        "What feels unfair or wrong about this?"
+      ]
+    },
+    {
+      "name": "Emotional Awareness",
+      "questions": [
+        "What emotions are present right now?",
+        "Where do you feel this in your body?",
+        "What might this emotion be signalling?"
+      ]
+    },
+    {
+      "name": "Perspective Shifting",
+      "questions": [
+        "What is another way to interpret this?",
+        "What might a neutral observer notice?",
+        "What becomes possible if you loosen this view?"
+      ]
+    },
+    {
+      "name": "Responsibility and Agency",
+      "questions": [
+        "What part of this is within your control?",
+        "What can you influence even slightly?",
+        "What choice do you still have here?"
+      ]
+    },
+    {
+      "name": "Action and Movement",
+      "questions": [
+        "What is one small step you can take next?",
+        "What would progress look like today?",
+        "What would make this easier to act on?"
+      ]
+    },
+    {
+      "name": "Reflection and Learning",
+      "questions": [
+        "What did this situation teach you?",
+        "What would you do differently next time?",
+        "What are you starting to understand more clearly?"
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "name": "Fact vs Story Separation",
+      "steps": [
+        "Write down what happened",
+        "Split into facts and interpretations",
+        "Remove assumptions",
+        "Notice the change in emotional intensity"
+      ]
+    },
+    {
+      "name": "Pattern Mapping",
+      "steps": [
+        "Describe the situation",
+        "Identify similar past experiences",
+        "Write the thought-feeling-action loop",
+        "Identify where to interrupt it"
+      ]
+    },
+    {
+      "name": "Belief Check",
+      "steps": [
+        "Write the main thought",
+        "Question its accuracy",
+        "List alternative explanations",
+        "Choose the most useful one"
+      ]
+    },
+    {
+      "name": "Emotional Reset",
+      "steps": [
+        "Name the emotion",
+        "Allow it without resistance",
+        "Breathe slowly",
+        "Let intensity decrease naturally"
+      ]
+    },
+    {
+      "name": "Letting Go Prompt",
+      "steps": [
+        "Identify what you are holding onto",
+        "Assess the cost",
+        "Decide whether to keep or release it",
+        "Shift focus intentionally"
+      ]
+    },
+    {
+      "name": "Small Action Builder",
+      "steps": [
+        "Define the outcome",
+        "Break into a small step",
+        "Ensure it is quick and simple",
+        "Commit to doing it"
+      ]
+    },
+    {
+      "name": "Communication Reset",
+      "steps": [
+        "Write your message",
+        "Remove blame",
+        "Make it clear and direct",
+        "Add a question"
+      ]
+    }
+  ],
+  "session_flow": [
+    "Check in and establish focus",
+    "Clarify the situation",
+    "Define desired outcome",
+    "Identify patterns and beliefs",
+    "Explore emotions",
+    "Shift perspective",
+    "Re-establish control",
+    "Choose an action",
+    "Commit to a small step",
+    "Close with reflection"
+  ],
+  "coach_rules": [
+    "Start by slowing the situation down and making it clearer",
+    "Ask focused questions before offering solutions",
+    "Reflect the user's situation accurately before reframing it",
+    "Keep responses calm, concise, and grounded",
+    "Prefer one clear next step over multiple options",
+    "Treat emotions as important information without letting them dominate the session",
+    "Challenge avoidance gently but directly",
+    "Reduce friction before increasing effort",
+    "Prepare for obstacles before the user leaves the conversation",
+    "End with action, commitment, and a clear review point",
+    "Help the user regain choice without becoming dependent on the coach"
+  ]
+}

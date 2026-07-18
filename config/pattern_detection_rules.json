@@ -1,0 +1,318 @@
+{
+  "pattern_detection_rules": {
+    "purpose": "Detect likely coaching patterns from user text so the coach can respond with the right mode, questions, and next-step style.",
+    "detection_order": [
+      "crisis_or_high_risk",
+      "emotional_support_needed",
+      "overwhelm",
+      "anxiety_or_fear",
+      "shame_or_self_attack",
+      "hurt_or_conflict",
+      "grief_or_loss",
+      "avoidance",
+      "overthinking",
+      "self_doubt",
+      "external_blame",
+      "stuck_loop",
+      "decision_block",
+      "low_motivation",
+      "goal_clarity_needed",
+      "normal_coaching"
+    ],
+    "rules": [
+      "Use the highest-priority matching pattern if multiple patterns appear",
+      "If emotional intensity is high, support mode comes before action mode",
+      "If the message is very short, ask for clarification before deep coaching",
+      "If no strong pattern is detected, default to normal coaching",
+      "Patterns are clues, not certainties"
+    ]
+  },
+  "patterns": {
+    "crisis_or_high_risk": {
+      "description": "Possible safety risk, crisis, self-harm, or urgent danger",
+      "keywords": [
+        "i want to die",
+        "kill myself",
+        "end it all",
+        "want to end it",
+        "end my life",
+        "self harm",
+        "hurt myself",
+        "suicide",
+        "suicidal",
+        "no reason to live",
+        "can't go on anymore",
+        "can't go on like this",
+        "don't want to go on",
+        "want to disappear forever"
+      ],
+      "response_mode": "safety_handoff",
+      "coach_action": "Stop normal coaching and direct the user to immediate human support"
+    },
+    "emotional_support_needed": {
+      "description": "General emotional strain where support-first tone is needed",
+      "keywords": [
+        "i'm struggling",
+        "this is too much",
+        "i feel awful",
+        "i feel broken",
+        "i'm a mess",
+        "i can't handle this",
+        "i'm not coping"
+      ],
+      "response_mode": "support_first",
+      "coach_action": "Acknowledge feeling, slow things down, ask one grounding question"
+    },
+    "overwhelm": {
+      "description": "User feels overloaded, flooded, or unable to cope with complexity",
+      "keywords": [
+        "overwhelmed",
+        "too much",
+        "stressed",
+        "burnt out",
+        "burned out",
+        "drained",
+        "exhausted",
+        "snowed under",
+        "can't keep up"
+      ],
+      "response_mode": "support_first",
+      "coach_action": "Simplify, reduce pressure, focus on one piece only"
+    },
+    "anxiety_or_fear": {
+      "description": "User appears anxious, fearful, panicked, or anticipatory",
+      "keywords": [
+        "anxious",
+        "panic",
+        "panicking",
+        "afraid",
+        "scared",
+        "worried",
+        "nervous",
+        "terrified",
+        "i can't stop thinking about what might happen"
+      ],
+      "response_mode": "support_first",
+      "coach_action": "Separate facts from prediction, ground the user, reduce threat framing"
+    },
+    "shame_or_self_attack": {
+      "description": "User is attacking self-worth or globally condemning themselves",
+      "keywords": [
+        "i'm useless",
+        "i'm pathetic",
+        "i hate myself",
+        "i'm a failure",
+        "i'm hopeless",
+        "i'm not enough",
+        "i ruin everything",
+        "i'm broken"
+      ],
+      "response_mode": "support_first",
+      "coach_action": "Reduce shame intensity, separate event from identity, challenge self-judgment gently"
+    },
+    "hurt_or_conflict": {
+      "description": "User is dealing with pain caused by another person or conflict",
+      "keywords": [
+        "hurt",
+        "betrayed",
+        "rejected",
+        "ignored",
+        "they don't care",
+        "they ruined",
+        "they always do this",
+        "i can't forgive",
+        "we had a fight",
+        "argument"
+      ],
+      "response_mode": "support_first",
+      "coach_action": "Clarify what happened, reduce emotional escalation, move toward meaning and choice"
+    },
+    "grief_or_loss": {
+      "description": "User is processing grief, loss, heartbreak, or deep sadness",
+      "keywords": [
+        "grief",
+        "grieving",
+        "loss",
+        "died",
+        "passed away",
+        "heartbroken",
+        "devastated",
+        "miss them",
+        "can't stop crying"
+      ],
+      "response_mode": "support_first",
+      "coach_action": "Go gently, avoid pushing productivity, help the user get through the immediate moment"
+    },
+    "avoidance": {
+      "description": "User knows what to do but is delaying, escaping, or not starting",
+      "keywords": [
+        "putting it off",
+        "procrastinating",
+        "i know i should but",
+        "i just can't start",
+        "avoiding it",
+        "i'll do it later",
+        "keeping myself busy instead"
+      ],
+      "response_mode": "action_light",
+      "coach_action": "Reduce friction, define a micro-step, make the start easier"
+    },
+    "overthinking": {
+      "description": "User is mentally circling without movement",
+      "keywords": [
+        "what if",
+        "i don't know what to do",
+        "i'm not sure which option",
+        "i keep thinking about it",
+        "i can't decide",
+        "going in circles",
+        "thinking too much"
+      ],
+      "response_mode": "clarify_then_act",
+      "coach_action": "Narrow focus, reduce options, identify the real decision"
+    },
+    "self_doubt": {
+      "description": "User doubts ability, readiness, or worthiness",
+      "keywords": [
+        "i can't do this",
+        "i'm not ready",
+        "i'm not good enough",
+        "i'll probably fail",
+        "i don't trust myself",
+        "someone else could do it better"
+      ],
+      "response_mode": "belief_shift",
+      "coach_action": "Challenge limiting belief, reconnect to evidence and identity, suggest one proof-building step"
+    },
+    "external_blame": {
+      "description": "User frames the situation entirely through others' control",
+      "keywords": [
+        "it's their fault",
+        "they made me",
+        "i can't because of them",
+        "they won't let me",
+        "nothing i do matters because of them"
+      ],
+      "response_mode": "ownership_shift",
+      "coach_action": "Gently shift attention toward what is still within the user's control"
+    },
+    "stuck_loop": {
+      "description": "User describes recurring cycles with no progress",
+      "keywords": [
+        "this always happens",
+        "same thing again",
+        "i keep ending up here",
+        "nothing changes",
+        "back here again",
+        "same pattern"
+      ],
+      "response_mode": "pattern_interrupt",
+      "coach_action": "Map the repeating loop and identify where to interrupt it"
+    },
+    "decision_block": {
+      "description": "User is blocked by indecision between options",
+      "keywords": [
+        "can't decide",
+        "stuck between",
+        "which one",
+        "two options",
+        "don't know whether to",
+        "should i"
+      ],
+      "response_mode": "decision_coaching",
+      "coach_action": "Clarify criteria, reduce noise, help choose based on values and reality"
+    },
+    "low_motivation": {
+      "description": "User lacks drive, energy, or willingness to move",
+      "keywords": [
+        "no motivation",
+        "can't be bothered",
+        "don't feel like it",
+        "i just don't care",
+        "flat",
+        "unmotivated"
+      ],
+      "response_mode": "friction_reduction",
+      "coach_action": "Lower the activation barrier, stop waiting for motivation, define a tiny action"
+    },
+    "goal_clarity_needed": {
+      "description": "User wants change but lacks a clear target",
+      "keywords": [
+        "i don't know what i want",
+        "i feel lost",
+        "not sure where i'm going",
+        "need direction",
+        "what should i do with my life",
+        "i have no idea"
+      ],
+      "response_mode": "direction_clarification",
+      "coach_action": "Clarify desire, values, and what matters before moving to action"
+    },
+    "normal_coaching": {
+      "description": "No dominant pattern; user is discussing a normal challenge or goal",
+      "keywords": [],
+      "response_mode": "normal_coaching",
+      "coach_action": "Use the standard coaching system"
+    }
+  },
+  "message_type_detection": {
+    "greeting": [
+      "hi",
+      "hello",
+      "hey"
+    ],
+    "confirmation": [
+      "yes",
+      "yeah",
+      "ok",
+      "okay",
+      "yep"
+    ],
+    "very_short_rule": "If the message has 3 or fewer words and is not clearly emotional or high-risk, ask for more detail before coaching deeply"
+  },
+  "response_modes": {
+    "safety_handoff": {
+      "goal": "Pause normal coaching and encourage immediate human help"
+    },
+    "support_first": {
+      "goal": "Acknowledge emotion, regulate intensity, then return to the main coaching flow"
+    },
+    "action_light": {
+      "goal": "Reduce friction and guide toward one tiny step"
+    },
+    "clarify_then_act": {
+      "goal": "Simplify, reduce options, and identify the real issue before action"
+    },
+    "belief_shift": {
+      "goal": "Surface self-limiting beliefs and help the user loosen them"
+    },
+    "ownership_shift": {
+      "goal": "Move gently from blame to agency"
+    },
+    "pattern_interrupt": {
+      "goal": "Map the loop and interrupt it"
+    },
+    "decision_coaching": {
+      "goal": "Help the user choose by clarifying criteria and reducing mental noise"
+    },
+    "friction_reduction": {
+      "goal": "Make action smaller and easier so motivation is not required first"
+    },
+    "direction_clarification": {
+      "goal": "Clarify what the user wants before deciding what to do"
+    },
+    "normal_coaching": {
+      "goal": "Use the standard coaching session flow"
+    }
+  },
+  "memory_mapping": {
+    "store_when_detected": [
+      "primary_pattern",
+      "secondary_pattern_if_strong",
+      "emotional_state",
+      "main_issue",
+      "next_step",
+      "obstacle_if_named"
+    ]
+  }
+}

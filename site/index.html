@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Receive Coaching — 43 coaches. One machine. Zero cloud.</title>
+<meta name="description" content="A fully local AI coaching app for Windows. 43 specialist coaches, persistent memory, mood tracking, and insights — powered by a model running on your own machine. Your conversations never leave your computer.">
+<style>
+  :root {
+    --bg: #0f1115; --panel: #161a22; --panel-2: #1d2230; --border: #2a3040;
+    --text: #dde3f0; --muted: #8b93a7; --accent: #7aa2f7; --accent-2: #9ece6a;
+    --radius: 10px;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f7f8fb; --panel: #ffffff; --panel-2: #eef1f7; --border: #d8dde8;
+      --text: #1a1f2b; --muted: #5a6275; --accent: #3d63dd; --accent-2: #4a9e3d;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  header { padding: 96px 0 64px; text-align: center; }
+  h1 { font-size: clamp(32px, 6vw, 52px); line-height: 1.15; letter-spacing: -0.02em; }
+  h1 .accent { color: var(--accent); }
+  .sub { color: var(--muted); font-size: clamp(17px, 2.5vw, 20px); max-width: 620px; margin: 20px auto 0; }
+  .cta-row { margin-top: 36px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 14px 28px; border-radius: var(--radius); text-decoration: none; font-weight: 600; }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-ghost { border: 1px solid var(--border); color: var(--text); }
+  .btn:hover { filter: brightness(1.1); }
+  .note { color: var(--muted); font-size: 13px; margin-top: 14px; }
+  section { padding: 56px 0; }
+  section h2 { font-size: 26px; margin-bottom: 24px; letter-spacing: -0.01em; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .card { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+  .card h3 { font-size: 16px; margin-bottom: 8px; }
+  .card p { color: var(--muted); font-size: 14.5px; }
+  .privacy { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; }
+  .privacy ul { list-style: none; margin-top: 12px; }
+  .privacy li { padding: 8px 0; padding-left: 28px; position: relative; color: var(--muted); }
+  .privacy li::before { content: "✓"; position: absolute; left: 0; color: var(--accent-2); font-weight: 700; }
+  .steps { counter-reset: step; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .step { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+  .step::before { counter-increment: step; content: counter(step); display: inline-flex; width: 28px; height: 28px; border-radius: 50%; background: var(--accent); color: #fff; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; margin-bottom: 10px; }
+  .step code { background: var(--panel-2); padding: 2px 7px; border-radius: 5px; font-size: 13.5px; }
+  .step p { color: var(--muted); font-size: 14.5px; }
+  details { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 20px; margin-bottom: 10px; }
+  summary { cursor: pointer; font-weight: 600; }
+  details p { color: var(--muted); margin-top: 10px; font-size: 14.5px; }
+  .req { font-size: 14px; color: var(--muted); background: var(--panel-2); border-radius: var(--radius); padding: 14px 18px; margin-top: 20px; }
+  footer { padding: 48px 0 64px; color: var(--muted); font-size: 13.5px; text-align: center; border-top: 1px solid var(--border); margin-top: 40px; }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <h1>43 coaches. One machine.<br><span class="accent">Zero cloud.</span></h1>
+  <p class="sub">Receive Coaching is a desktop coaching app powered by an AI model running entirely on your own computer. Career, grief, ADHD, keto, spiritual life — every conversation stays on your machine, because it never had anywhere else to go.</p>
+  <div class="cta-row">
+    <!-- TODO: point at the real release URL once published (e.g. GitHub Releases) -->
+    <a class="btn btn-primary" href="#download">Download for Windows</a>
+    <a class="btn btn-ghost" href="#how">How it works</a>
+  </div>
+  <p class="note">Free. No account. No telemetry. ~75 MB portable .exe.</p>
+</header>
+
+<section class="wrap">
+  <div class="privacy">
+    <h2>Privacy isn't a policy here. It's the architecture.</h2>
+    <ul>
+      <li>The AI runs locally via <strong>Ollama</strong> or <strong>llama.cpp</strong> — your words never touch a server</li>
+      <li>Memory, mood history, and journals live in plain JSON files on your disk, readable and deletable by you</li>
+      <li>No account, no sign-in, no analytics, no network calls except to your own localhost</li>
+      <li>Works fully offline — on a plane, it's exactly as capable as at home</li>
+    </ul>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>What's inside</h2>
+  <div class="grid">
+    <div class="card"><h3>43 specialist coaches</h3><p>Practical (career, business, decisions), wellbeing (sleep, keto, mindfulness), psychological frameworks (CBT, REBT, NLP), life transitions (grief, divorce, midlife), and spiritual paths. Each with its own approach — and they refer to each other when your need fits elsewhere.</p></div>
+    <div class="card"><h3>Memory that compounds</h3><p>Your coaches remember: goals, commitments, recurring patterns, emotional trends. A mood strip shows your last 30 sessions at a glance, and a one-click Insights report finds the themes.</p></div>
+    <div class="card"><h3>Ground coaches in your material</h3><p>Drop .txt, .md, or .pdf files onto any coach — your journal, a book's notes, your business plan — and it coaches from that material, with sources cited.</p></div>
+    <div class="card"><h3>Real chat ergonomics</h3><p>Streaming replies, stop mid-generation, regenerate, edit your last message, per-coach chat history with archives, markdown export, voice read-aloud.</p></div>
+    <div class="card"><h3>Safety-aware by design</h3><p>Crisis signals route to human helplines — even when the model is offline. Clinical-adjacent coaches know their scope and say so.</p></div>
+    <div class="card"><h3>Yours to extend</h3><p>A coach is a folder with a JSON file. Add your own coach in five minutes. Swap models per coach. CLI included for terminal people.</p></div>
+  </div>
+</section>
+
+<section class="wrap" id="how">
+  <h2>Running in three steps</h2>
+  <div class="steps">
+    <div class="step"><h3>Install Ollama</h3><p>Grab it from <code>ollama.com</code> — the free, open-source local model runner.</p></div>
+    <div class="step"><h3>Pull two models</h3><p><code>ollama pull llama3.1</code> and <code>ollama pull nomic-embed-text</code>. About 5 GB total.</p></div>
+    <div class="step"><h3>Run the app</h3><p>Double-click <code>ReceiveCoaching-portable.exe</code>. No install, no admin rights, no Python required.</p></div>
+  </div>
+  <p class="req"><strong>Requirements:</strong> Windows 10/11, 64-bit. 8 GB RAM minimum (16 GB recommended for the 8B model). Any GPU helps but isn't required. Advanced users can point it at any OpenAI-compatible server instead of Ollama.</p>
+</section>
+
+<section class="wrap" id="download">
+  <h2>Questions you should ask</h2>
+  <details>
+    <summary>Is it actually private, or "private"?</summary>
+    <p>Actually. The app's only network traffic is to 127.0.0.1 — the model server on your own machine. There is no account system, no telemetry, no crash reporting, no update phone-home. You can verify this with any network monitor, and the source is readable.</p>
+  </details>
+  <details>
+    <summary>Is this therapy?</summary>
+    <p>No. It's coaching — structured questions, reframing, accountability. Coaches in clinical-adjacent areas (CBT, anxiety, addiction recovery, grief) explicitly state their limits and point you toward professional help when your need is beyond coaching. Crisis signals surface real helplines immediately.</p>
+  </details>
+  <details>
+    <summary>How good is a local model at coaching?</summary>
+    <p>Good coaching is mostly good questions, and 8B-class models ask good questions reliably — especially grounded in your own memory and source material. You can point any coach at a bigger model if your hardware allows.</p>
+  </details>
+  <details>
+    <summary>What does it cost?</summary>
+    <p>Nothing. No subscription, no tiers. The cloud coaching apps charge $10–20/month partly because every message costs them server money. Yours run on electricity you already pay for.</p>
+  </details>
+</section>
+
+<footer class="wrap">
+  <p>Receive Coaching · runs on your machine, answers to you</p>
+  <p style="margin-top:8px;">Not a substitute for professional mental-health care. If you're in crisis: <a href="https://findahelpline.com">findahelpline.com</a></p>
+</footer>
+
+</body>
+</html>

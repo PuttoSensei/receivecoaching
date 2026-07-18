@@ -1,0 +1,75 @@
+{
+  "name": "receive-coaching-ui",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Desktop UI for Receive Coaching — Electron shell around the Python backend.",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build:backend": "pyinstaller build/server_backend.spec --distpath dist-py --workpath build/_pyi --noconfirm",
+    "prebuild": "npm run build:backend",
+    "build": "electron-builder --win",
+    "prebuild:dir": "npm run build:backend",
+    "build:dir": "electron-builder --win dir"
+  },
+  "build": {
+    "appId": "com.receivecoaching.app",
+    "productName": "Receive Coaching",
+    "copyright": "Copyright © 2026",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "electron/**/*",
+      "ui/**/*",
+      "package.json",
+      "!**/__pycache__/**",
+      "!**/*.pyc",
+      "!**/.embeddings.json"
+    ],
+    "extraResources": [
+      {
+        "from": "receive_coach.py",
+        "to": "app/receive_coach.py"
+      },
+      {
+        "from": "server.py",
+        "to": "app/server.py"
+      },
+      {
+        "from": "config",
+        "to": "app/config",
+        "filter": ["**/*"]
+      },
+      {
+        "from": "coaches",
+        "to": "app/coaches",
+        "filter": ["**/*", "!**/.embeddings.json"]
+      },
+      {
+        "from": "dist-py/server",
+        "to": "app/pyserver",
+        "filter": ["**/*"]
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "build/icon.ico",
+      "artifactName": "ReceiveCoaching-portable-${version}.${ext}"
+    },
+    "portable": {
+      "artifactName": "ReceiveCoaching-portable-${version}.${ext}"
+    }
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^26.8.1"
+  }
+}

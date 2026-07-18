@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; connect-src 'self' http://127.0.0.1:* ws://127.0.0.1:*; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none';">
+<title>Receive Coaching</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="app">
+  <!-- Sidebar -->
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <h1>Receive Coaching</h1>
+      <div class="user-bar">
+        <label for="user-input">User</label>
+        <input type="text" id="user-input" value="justin" spellcheck="false">
+      </div>
+    </div>
+
+    <div class="sidebar-search">
+      <input type="text" id="coach-search" placeholder="Search coaches..." spellcheck="false">
+    </div>
+
+    <div class="sidebar-list" id="coach-list">
+      <div class="loading">Loading coaches...</div>
+    </div>
+
+    <div class="sidebar-footer">
+      <button class="icon-btn" id="btn-memory" title="View memory">
+        <span class="icon">⌛</span> Memory
+      </button>
+      <button class="icon-btn" id="btn-sources" title="Manage sources">
+        <span class="icon">📄</span> Sources
+      </button>
+      <button class="icon-btn" id="btn-theme" title="Toggle theme (system / dark / light)">
+        <span class="icon" id="btn-theme-icon">◐</span>
+      </button>
+      <button class="icon-btn" id="btn-settings" title="Settings">
+        <span class="icon">⚙</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main chat area -->
+  <main id="main">
+    <header id="chat-header">
+      <div class="chat-title">
+        <h2 id="active-coach-name">Select a coach</h2>
+        <div class="chat-meta">
+          <span id="active-coach-desc"></span>
+          <span class="dot">·</span>
+          <span id="active-coach-model"></span>
+          <span class="dot">·</span>
+          <span id="active-coach-sources"></span>
+        </div>
+      </div>
+      <div class="chat-actions">
+        <button class="ghost-btn" id="btn-history" title="Archived chats with this coach">History</button>
+        <button class="ghost-btn" id="btn-export-chat" title="Download this conversation as a markdown file">Export</button>
+        <button class="ghost-btn" id="btn-new-chat" title="Archive this chat and start fresh (keeps memory)">New chat</button>
+      </div>
+    </header>
+
+    <div id="messages" class="messages">
+      <div class="welcome">
+        <h3>Pick a coach from the left to start.</h3>
+        <p class="muted">Switch anytime. Memory follows you.</p>
+        <p class="muted shortcuts">/ search · Ctrl+N new chat · Ctrl+M memory · Ctrl+T theme · Ctrl+, settings · Esc close panels</p>
+      </div>
+    </div>
+
+    <div id="composer" class="composer">
+      <button id="mic-btn" title="Hold to talk (local whisper server)" style="display:none;">🎤</button>
+      <textarea
+        id="input"
+        placeholder="Type a message. Shift+Enter for a new line."
+        rows="1"
+        spellcheck="true"
+        disabled
+      ></textarea>
+      <button id="send-btn" disabled>Send</button>
+    </div>
+  </main>
+
+  <!-- Right drawer: memory, sources, settings (one drawer, different contents) -->
+  <aside id="drawer" class="drawer drawer-closed">
+    <header class="drawer-header">
+      <h3 id="drawer-title">Memory</h3>
+      <button class="ghost-btn" id="drawer-close">Close</button>
+    </header>
+    <div id="drawer-body" class="drawer-body"></div>
+  </aside>
+</div>
+
+<!-- Settings modal -->
+<div id="modal" class="modal-hidden">
+  <div class="modal-backdrop"></div>
+  <div class="modal-body">
+    <header>
+      <h3 id="modal-title">Settings</h3>
+      <button class="ghost-btn" id="modal-close">×</button>
+    </header>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+# Private memory and conversation data
+data/users/*.json
+!data/users/.gitkeep
+
+# Log files (can contain full conversation history)
+logs/*
+!logs/.gitkeep
+
+# Per-coach embedding caches (large, machine-specific)
+coaches/*/.embeddings.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node / Electron
+node_modules/
+npm-debug.log
+yarn-error.log
+dist/
+out/
+
+# PyInstaller backend bundle
+dist-py/
+build/_pyi/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Env files and secrets
+.env
+.env.*
+*.key
+*.pem
+
+# Generated build helpers (recreate with build/setup_7za_wrapper.py)
+build/7za.exe
+build/7za-real.exe
+build/_build_work/

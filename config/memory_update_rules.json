@@ -1,0 +1,48 @@
+{
+  "update_rules": [
+    "Extract the user's main issue",
+    "Store the primary detected pattern",
+    "Store a strong secondary pattern if clearly present",
+    "Save emotional state if clearly expressed",
+    "Capture the chosen action step",
+    "Track commitments made by the user",
+    "Update recurring blocks if repeated across sessions",
+    "Record progress signals if the user reports success",
+    "Record obstacles if the user names what got in the way",
+    "Store what helped if support mode reduced distress",
+    "Do not save trivial small talk or generic greetings",
+    "Keep memory concise, useful, and action-relevant"
+  ],
+  "fields_to_update": {
+    "main_issue": "Short summary of what the user is dealing with",
+    "primary_pattern": "Main coaching pattern detected from the user's message",
+    "secondary_pattern": "Optional second pattern if clearly present",
+    "emotional_state": "Simple label such as stressed, anxious, hurt, stuck, confused, hopeful",
+    "action_step": "The next step the user committed to",
+    "commitments": "Specific promises, timelines, or actions the user agreed to",
+    "recurring_blocks": "Repeated obstacles, thinking loops, or stuck patterns",
+    "progress": "Wins, improvements, completions, or positive movement mentioned by the user",
+    "obstacle": "What got in the way of progress",
+    "what_helped": "What reduced overwhelm or helped the user move forward"
+  },
+  "save_conditions": [
+    "Save memory after each meaningful coaching exchange",
+    "Do not overwrite useful existing memory unless the new information is clearer or more current",
+    "If the user changes goals or direction, update current focus",
+    "If a pattern appears in multiple sessions, promote it into recurring_blocks",
+    "If the user completes an action, add it to progress"
+  ],
+  "memory_summary_template": {
+    "main_issue": "",
+    "primary_pattern": "",
+    "secondary_pattern": "",
+    "emotional_state": "",
+    "action_step": "",
+    "commitments": [],
+    "recurring_blocks": [],
+    "progress": [],
+    "obstacle": "",
+    "what_helped": "",
+    "updated_at": ""
+  }
+}
