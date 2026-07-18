@@ -240,6 +240,13 @@ python .\test_receive_coach.py
 - `logs/chat_log.jsonl` — conversation log (auto-rotates at 10MB; gitignored)
 - `logs/llama_errors.log`, `logs/embed_error.log` — diagnostics (gitignored)
 
+## Support the project
+
+Receive Coaching is free and will stay free. If it's useful to you, the repo's
+Sponsor button (once live) or a share with someone who needs a private coach
+are both appreciated. Optional paid **coach packs** (curated expert source
+libraries) fund development without paywalling the app.
+
 ## Safety notes
 
 **Crisis handoff:** messages matching the `crisis_or_high_risk` pattern (self-harm signals, configured in `config/pattern_detection_rules.json`) route to human-support resources — Samaritans 116 123 (UK), 988 (US/CA), Lifeline 13 11 14 (AU), findahelpline.com — instead of normal coaching. This works even in rule-based fallback mode when no model is running.

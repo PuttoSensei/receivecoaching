@@ -56,3 +56,7 @@ env/
 build/7za.exe
 build/7za-real.exe
 build/_build_work/
+
+# Paid content packs — never commit to the public repo
+packs/
+dist-packs/
