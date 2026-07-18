@@ -245,7 +245,10 @@ python .\test_receive_coach.py
 Receive Coaching is free and will stay free. If it's useful to you, the repo's
 Sponsor button (once live) or a share with someone who needs a private coach
 are both appreciated. Optional paid **coach packs** (curated expert source
-libraries) fund development without paywalling the app.
+libraries) fund development without paywalling the app:
+
+- **[Founder Pack — $12](https://puttosensei.gumroad.com/l/founder-pack)** — 12 framework-dense
+  playbooks for the business, decision, career, leadership, money, and goal coaches.
 
 ## Safety notes
 
