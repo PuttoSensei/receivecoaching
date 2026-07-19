@@ -249,6 +249,8 @@ libraries) fund development without paywalling the app:
 
 - **[Founder Pack — $12](https://puttosensei.gumroad.com/l/founder-pack)** — 12 framework-dense
   playbooks for the business, decision, career, leadership, money, and goal coaches.
+- **[Conflict & Repair Pack — $12](https://puttosensei.gumroad.com/l/conflict-pack)** — 12 playbooks
+  for the hard conversations: fair fighting, real apologies, boundaries, saying no, de-escalation, co-parenting.
 
 ## Safety notes
 
